@@ -65,8 +65,11 @@ function App() {
 			<NewNote
 			onSubmit={onCreateNote}
 		 	onAddTag= {addTag}
-		 	availableTags ={tags}/>} />
-		<Route path ="/:id">
+		 	availableTags ={tags}
+			/>
+			}
+			/>
+		<Route path ="/:id" element={<NoteLayout notes={notesWithTags}/> }>
 			<Route index element ={<h1>Show</h1>} />
 			<Route path="edit" element ={<h1>Edit</h1>} />
 
